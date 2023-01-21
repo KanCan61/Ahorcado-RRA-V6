@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ahorcado RRA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <img src="images/logo.svg" class="logo"> 
+    <div class="patibulo">
+      <img class="trazo1" src="Imagenes/Rectangle 14.png" id="t1" style = "display: none"/>
+      <img class="trazo2" src="Imagenes/Rectangle 15.png" id="t2" style = "display: none" />
+      <img class="trazo3" src="Imagenes/Rectangle 16.png" id="t3" style = "display: none"/>
+      <img class="trazo4" src="Imagenes/Rectangle 17.png" id="t4" style = "display: none"/>
+      <img class="trazo5" src="Imagenes/Circulo 9.png" id="t5" style = "display: none"/>
+      <img class="trazo6" src="Imagenes/Rectangle 18.png" id="t6" style = "display: none"/>
+      <img class="trazo7" src="Imagenes/Rectangle 21.png" id="t7" style = "display: none"/>
+      <img class="trazo8" src="Imagenes/Rectangle 20.png" id="t8" style = "display: none"/>
+      <img class="trazo9" src="Imagenes/Rectangle 19.png" id="t9" style = "display: none"/>
+      <img class="trazo10" src="Imagenes/Rectangle 22.png" id="t10" style = "display: none"/>
+    </div>
+    <div class="informacion" id="informacion" style="display: none">
+      <!-- Icono de 'Información' -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="26"
+        height="26"
+        fill="currentColor"
+        class="bi bi-exclamation-circle-fill"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
+        />
+      </svg>
+      <h6>Max. de 8 letras MAYUSCULAS</h6>
+    </div>
+      <div id="div-desaparece" class="botones-home">
+        <a href="#forca">
+          <!-- Buton/input -->
+          <input class="btn-iniciar" type="submit" value="Iniciar Juego" id="iniciar-juego" onclick="iniciarJuego()">
+        </a>
+      </div>
+      <button class="agregarPalabra" id="agregar-palabra" onclick="btnAgregarPalabra()">
+        Agregar palabra
+      </button>
+      <div>
+        <textarea class="input-texto" id="nueva-palabra" style="display: none"
+        placeholder=" Ingrese una palabra"></textarea>
+      </div>
+      <button class="nuevoJuego" id="nuevo-juego" style = "display: none" onclick="btnNvoJuego()">
+        Nuevo juego
+      </button>
+      <button class="desistir" id="desistir" style = "display: none" onclick="btnDesistir()">Desistir</button>
+    </div>  
+    <button class="guardar-empezar" id="guardar-empezar" style = "display: none" onclick="btnGuardarEmpezar()">
+      Guardar y empezar
+    </button>
+    <button class="cancelar" id="cancelar" style = "display: none" onclick="btnCancelar()">
+      Cancelar
+    </button>
+
+    <div id="div-aparece-ahorcado" class="canvas">
+      <!-- Canvas -->
+      <canvas id="forca" width="1200" height="860"></canvas>
+      <div class="subrayado">
+      </div>
+    </div>
+<!-- JavaScript -->
+  <script src="horca.js"></script>
+  <script src="canvas.js"></script>
+  </body>
+</html>
